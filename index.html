@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Grocery Bill Calculator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Grocery Bill Calculator</h1>
+  <div class="small">Select quantities, then click "Calculate".</div>
+
+  <table id="itemsTable">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price (₹)</th>
+        <th>Qty</th>
+        <th class="right">Line Total (₹)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- populated by JS -->
+    </tbody>
+  </table>
+
+  <div class="flex controls">
+    <div>
+      <label>
+        Discount (%):
+        <input type="number" id="discount" min="0" max="100" value="0">
+      </label>
+    </div>
+    <div class="buttons">
+      <button class="btn" id="calcBtn">Calculate</button>
+      <button class="btn" id="clearBtn">Clear</button>
+    </div>
+  </div>
+
+  <div class="summary" id="summary">
+    <div><strong>Subtotal:</strong> ₹<span id="subtotal">0.00</span></div>
+    <div><strong>Discount:</strong> <span id="discountDisplay">0%</span></div>
+    <div><strong>Total Payable:</strong> ₹<span id="total">0.00</span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
